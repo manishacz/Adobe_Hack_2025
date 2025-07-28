@@ -1,0 +1,15 @@
+# For OCR
+paddleocr==2.8.0
+paddlepaddle
+
+# For PDF text and metadata extraction
+pdfminer.six==20231228
+
+# Specific numpy version
+numpy==1.26.4
+
+# HTTP library needed by paddleocr for downloads
+requests
+
+# Optional, but good for handling PDF-to-image conversion if needed
+Pillow
