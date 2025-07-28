@@ -6,10 +6,12 @@
 ![Python Version](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)
-
+[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-View%20Image-blue?logo=docker)](https://hub.docker.com/r/manishdoc04/challenge_1a)
 ---
 
 ## 🚀 Overview
+
+
 
 DocuMind is a high-performance, intelligent engine designed to solve the core challenge of Round 1A: **understanding and structuring any PDF document**. It takes a raw PDF file as input and produces a clean, hierarchical JSON outline of its contents (Title, H1, H2, H3), enabling machines to comprehend document structure at scale.
 
@@ -64,7 +66,7 @@ Our solution is containerized with Docker for easy execution and to meet the hac
 From the project's root directory, run the following command:
 
 ```bash
-docker build --platform linux/amd64 -t documind-solution:latest .
+docker build --platform linux/amd64 -t challenge_1a_lightweight -f Dockerfile.lightweight . 
 ```
 
 ### 2. Run the Container
@@ -72,7 +74,7 @@ docker build --platform linux/amd64 -t documind-solution:latest .
 Place your input PDF files into an `input` directory in the project root. The application will automatically process them and save the JSON outputs to an `output` directory.
 
 ```bash
-docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none documind-solution:latest
+docker run --rm  -v "%cd%/sample_dataset/pdfs:/app/sample_dataset/pdfs"  -v "%cd%/sample_dataset/output:/app/sample_dataset/output"  --network none challenge_1a_lightweight
 ```
 
 ---
