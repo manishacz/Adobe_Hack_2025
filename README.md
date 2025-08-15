@@ -13,7 +13,7 @@
 
 
 
-DocuMind is a high-performance, intelligent engine designed to solve the core challenge of Round 1A: **understanding and structuring any PDF document**. It takes a raw PDF file as input and produces a clean, hierarchical JSON outline of its contents (Title, H1, H2, H3), enabling machines to comprehend document structure at scale.
+PDFOutliner is a high-performance, intelligent engine designed to solve the core challenge of Round 1A: **understanding and structuring any PDF document**. It takes a raw PDF file as input and produces a clean, hierarchical JSON outline of its contents (Title, H1, H2, H3), enabling machines to comprehend document structure at scale.
 
 Our solution is built to be robust, fast, and fully compliant with all hackathon constraints, including offline execution and a sub-800MB footprint.
 
