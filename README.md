@@ -1,5 +1,5 @@
 # Adobe_Hack_2025
-# 📄 Project DocuMind: The Adaptive PDF Structure Extractor
+# 📄 Project PDFOutliner: The Adaptive PDF Structure Extractor
 
 **A submission for the Adobe India Hackathon 2025 - Round 1A**
 
@@ -15,7 +15,7 @@
 
 DocuMind is a high-performance, intelligent engine designed to solve the core challenge of Round 1A: **understanding and structuring any PDF document**. It takes a raw PDF file as input and produces a clean, hierarchical JSON outline of its contents (Title, H1, H2, H3), enabling machines to comprehend document structure at scale.
 
-Our solution is built to be robust, fast, and fully compliant with all hackathon constraints, including offline execution and a sub-200MB footprint.
+Our solution is built to be robust, fast, and fully compliant with all hackathon constraints, including offline execution and a sub-800MB footprint.
 
 ---
 
@@ -84,6 +84,6 @@ docker run --rm  -v "%cd%/sample_dataset/pdfs:/app/sample_dataset/pdfs"  -v "%cd
 Our solution was engineered from the ground up to meet and exceed all hackathon constraints:
 
 * **Execution Time (≤ 10s):** Our `pdfminer.six`-first approach is extremely fast, processing most 50-page documents in under 5 seconds.
-* **Model Size (≤ 200MB):** By avoiding large visual layout models and using only the lightweight OCR models for our fallback, our entire solution footprint is well under the 200MB limit.
+* **Model Size (≤ 800MB):** By avoiding large visual layout models and using only the lightweight OCR models for our fallback, our entire solution footprint is well under the 200MB limit.
 * **Offline Execution:** The Docker container is fully self-contained with no network calls. All models and dependencies are included within the image.
 * **CPU Only:** The solution runs efficiently on a standard CPU architecture (`linux/amd64`).
